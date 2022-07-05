@@ -6,10 +6,15 @@ import java.util.ArrayList;
  * Hello world!
  *
  */
-public class App {
-	public static void main(String[] args) {
+public class App 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello in the main method : ");
+
 		@SuppressWarnings("serial")
-		ArrayList<String> data = new ArrayList<String>() {
+		ArrayList<String> data = new ArrayList<String>() 
+		{
 			{
 				add("((A & (C & B)) | ! (  B & C)) ");
 				add("!a");
@@ -25,16 +30,14 @@ public class App {
 				add("(AA)");
 				add("!A & !B & !C & !D & !E & !F & !G");
 				add("A | ((B & C)) | (D & ((E & RH1 & RH2 & RH3) | E1))  | (F & ((G & RH1 & RH2) | G1)) | H | I");
-
 			}
 		};
-
 		App obj = new App();
 
-		for (String expression : data) {
+		for (String expression : data) 
+		{
 			obj.processExpression(expression.trim());
 		}
-
 	}
 
 	public void processExpression(String expression) {
@@ -96,12 +99,12 @@ public class App {
 
 	public boolean isLabel(char ch) {
 		int charValue = (int) ch;
-		
+
 		if (charValue >= 97 && charValue <= 122)
 			return true;
 		if (charValue >= 64 && charValue <= 90)
 			return true;
-		
+
 		return false;
 	}
 }
