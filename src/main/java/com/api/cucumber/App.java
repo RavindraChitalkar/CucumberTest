@@ -10,7 +10,6 @@ public class App
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("Hello in the main method : ");
 
 		@SuppressWarnings("serial")
 		ArrayList<String> data = new ArrayList<String>() 
